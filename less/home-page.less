@@ -10,19 +10,39 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    
+    @media @mobile {
+      display:flex;
+      align-items: center;
+      flex-direction: column;
+      
+    }  
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile{
+          width:100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile{
+        width:100%;
+        display:flex;
+        justify-content: center;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile{
+          width:100%;
+          margin: 2% 0;
+        }
       }
     }
   }
@@ -30,6 +50,12 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      display:flex;
+      align-items: center;
+      flex-direction: column-reverse;
+    }  
 
     .text-content {
       padding-left: 1%;
@@ -46,9 +72,15 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile{
+      width:100%;
+      margin: 2% 0;
+    }
+
     img {
       border-radius: 10px;
     }
+
   }
 
   .content-pick {
@@ -57,9 +89,32 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      display:flex;
+      align-items: center;
+      flex-direction: column;
+    }  
+
+    
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      
+      @media @mobile {
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        width:80%;
+      }  
+    
+      h4{
+        @media @mobile {
+        display:flex;
+        justify-content: flex-start;
+        width:100%;
+        }  
+      }  
+
     }
   }
 }// home
@@ -71,12 +126,25 @@
   margin: 2% 0;
   
   .insideheader{
-    width:70%;
+    width:67%;
     display:flex;
     align-items: center;
     justify-content: center;
     margin:0 auto;
   }
+
+  @media @mobile {
+    .insideheader{
+      width:70%;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin:0 auto;
+    }
+  }
+  
+
 }
 
 .topline{
@@ -86,5 +154,8 @@
 }
 
 .btn{
-  .custom-btn(#008B8B,200px, white)
+  .custom-btn(#008B8B,200px, white);
+  @media @mobile {
+  .custom-btn(@width:400px);
+  }
 }

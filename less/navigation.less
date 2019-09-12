@@ -1,9 +1,19 @@
 .navigation {
     display:flex;
     justify-content: flex-end;
-    width:60%;
+    width:78%;
     a {
         font-size: 1.6rem; 
         margin:0 2%;   
+    }
+
+    @media @mobile{
+        display:flex;
+        justify-content: space-between;
+        width:100%;
+        a {
+          font-size: 1.6rem; 
+          margin:0 3%;   
+     }
     }
 }
